@@ -52,7 +52,12 @@ def get_history(user_id):
 
 @app.get("/")
 def home():
-    return {"message": "Welcome to the Study Bot API"}
+    return {
+        "project": "Study Bot",
+        "status": "Active",
+        "docs": "/docs",
+        "chat_endpoint": "/chat"
+    }
 
 @app.post("/chat")
 def chat(request: ChatRequest):
